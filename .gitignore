@@ -1,4 +1,75 @@
-node_modules
-.vscode
-*.temp.json
+# Dependencias
+node_modules/
+
+# Logs de npm
+npm-debug.log*
+
+# Bloqueo de versiones
 pnpm-*
+# opcional, algunos equipos sí lo incluyen otros no:
+package-lock.json
+
+# Archivos temporales
+*.temp.json
+
+# Cobertura de tests
+coverage/
+
+# Reportes de Jest
+test-report.html
+junit.xml
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+*.suo
+*.ntvs*
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+
+
+
+
+
+
+# Dependencias
+node_modules/
+
+# Logs de npm y bloqueo de versiones
+npm-debug.log*
+pnpm-lock.yaml
+
+# package-lock.json   
+
+# Cobertura de tests
+coverage/
+
+# Reportes de Jest (tienes jest-html-reporter y jest-junit)
+test-report.html
+junit.xml
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema operativo (MAC y windows)
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+*.suo
+*.ntvs*
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
