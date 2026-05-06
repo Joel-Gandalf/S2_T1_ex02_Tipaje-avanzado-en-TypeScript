@@ -31,9 +31,14 @@ Repte 2:
   Descobreix com tipar params com un objecte amb una clau first que sigui un nombre i una clau second que també sigui un nombre.
 */
 
-/* describe("Problema de paràmetre objecte", () => {
+describe("Problema de paràmetre objecte", () => {
   it("Ha de sumar els dos nombres", () => {
-    const addTwoNumbers = (params) => {
+
+    interface Params {
+      first : number;
+      second : number;
+    }
+    const addTwoNumbers = (params : Params) => {
       return params.first + params.second;
     };
     expect(
@@ -51,7 +56,7 @@ Repte 2:
     ).toEqual(30);
     expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<{ first: number; second: number }>();
   });
-}); */
+}); 
 
 /*
 Repte 3:
