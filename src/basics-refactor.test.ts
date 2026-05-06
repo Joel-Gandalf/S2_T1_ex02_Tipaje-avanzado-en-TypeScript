@@ -63,8 +63,10 @@ Repte 3:
   Has d'esbrinar com tipar l'objecte perquè 'last' sigui opcional.
 */
 
-/* describe("Problema de propietats opcionals", () => {
-  const getName = (params: { first: string; last: string }) => {
+describe("Problema de propietats opcionals", () => {
+  // const getName = (params: { first: string; last: string }) => {
+  // Añadido ? en last
+  const getName = (params: { first: string; last?: string}) => {
     if (params.last !== undefined) {
       return `${params.first} ${params.last}`;
     }
@@ -87,7 +89,7 @@ Repte 3:
 
     expect(name).toEqual("Jen Simmons");
   });
-}); */
+});
 
 /*
 Repte 4:
