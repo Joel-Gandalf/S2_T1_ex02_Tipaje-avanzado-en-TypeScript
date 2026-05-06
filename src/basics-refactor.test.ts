@@ -10,9 +10,17 @@ Repte 1:
 
 describe("Problema de nombres", () => {
   it("Ha de sumar els dos nombres", () => {
-    const addTwoNumbers = (a, b) => {
+    const addTwoNumbers = (a : number, b : number) => {
       return a + b;
     };
+    // La opción abajo implementada no funciona porque devuelve un objeto
+    // interface Num {
+    //   a: number;
+    //   b: number;
+    // }
+    // const addTwoNumbers = (num: Num) => {
+    //   return num.a + num.b;
+    // };
     expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<number>();
     expectTypeOf(addTwoNumbers).parameter(1).toEqualTypeOf<number>();
   });
