@@ -96,8 +96,8 @@ Repte 4:
   Has d'esbrinar com marcar el paràmetre 'last' com a opcional.
 */
 
-/* describe("Problema de paràmetres opcionals", () => {
-  const getName = (first: string, last: string) => {
+describe("Problema de paràmetres opcionals", () => {
+  const getName = (first: string, last?: string) => {
     if (last !== undefined) {
       return `${first} ${last}`;
     }
@@ -115,7 +115,7 @@ Repte 4:
 
     expect(name).toEqual("Jen Simmons");
   });
-}); */
+});
 
 /*
 Repte 5:
