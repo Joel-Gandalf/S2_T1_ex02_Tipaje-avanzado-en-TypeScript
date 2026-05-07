@@ -321,9 +321,12 @@ Repte 11:
   Actualitza cache perquè estigui tipat correctament i els errors desapareguin. Pista: Consulta com representar objectes amb claus de tipus string i valors tipats.
 */
 
-/* describe("Problema de Record", () => {
+describe("Problema de Record", () => {
   const createCache = () => {
-    const cache = {};
+    // Opción 1:
+    // const cache: {[key: string]: string} = {};
+    // Opción 2:
+    const cache: Record<string, string> = {}
 
     const add = (id: string, value: string) => {
       cache[id] = value;
@@ -356,7 +359,7 @@ Repte 11:
 
     expect(cache.cache["123"]).toEqual(undefined);
   });
-}); */
+});
 
 /*
 Repte 12:
