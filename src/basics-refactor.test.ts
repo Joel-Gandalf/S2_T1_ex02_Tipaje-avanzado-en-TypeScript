@@ -8,142 +8,142 @@ Repte 1:
   i mira si pots trobar com solucionar aquests errors de TypeScript.
 */
 
-// describe("Problema de nombres", () => {
-//   it("Ha de sumar els dos nombres", () => {
-//     const addTwoNumbers = (a : number, b : number) => {
-//       return a + b;
-//     };
-//     // La opción abajo implementada no funciona porque devuelve un objeto
-//     // interface Num {
-//     //   a: number;
-//     //   b: number;
-//     // }
-//     // const addTwoNumbers = (num: Num) => {
-//     //   return num.a + num.b;
-//     // };
-//     expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<number>();
-//     expectTypeOf(addTwoNumbers).parameter(1).toEqualTypeOf<number>();
-//   });
-// });
+describe("Problema de nombres", () => {
+  it("Ha de sumar els dos nombres", () => {
+    const addTwoNumbers = (a : number, b : number) => {
+      return a + b;
+    };
+    // La opción abajo implementada no funciona porque devuelve un objeto
+    // interface Num {
+    //   a: number;
+    //   b: number;
+    // }
+    // const addTwoNumbers = (num: Num) => {
+    //   return num.a + num.b;
+    // };
+    expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<number>();
+    expectTypeOf(addTwoNumbers).parameter(1).toEqualTypeOf<number>();
+  });
+});
 
-// /*
-// Repte 2:
-//   Descobreix com tipar params com un objecte amb una clau first que sigui un nombre i una clau second que també sigui un nombre.
-// */
+/*
+Repte 2:
+  Descobreix com tipar params com un objecte amb una clau first que sigui un nombre i una clau second que també sigui un nombre.
+*/
 
-// describe("Problema de paràmetre objecte", () => {
-//   it("Ha de sumar els dos nombres", () => {
+describe("Problema de paràmetre objecte", () => {
+  it("Ha de sumar els dos nombres", () => {
 
-//     interface Params {
-//       first : number;
-//       second : number;
-//     }
-//     const addTwoNumbers = (params : Params) => {
-//       return params.first + params.second;
-//     };
-//     expect(
-//       addTwoNumbers({
-//         first: 2,
-//         second: 4,
-//       })
-//     ).toEqual(6);
+    interface Params {
+      first : number;
+      second : number;
+    }
+    const addTwoNumbers = (params : Params) => {
+      return params.first + params.second;
+    };
+    expect(
+      addTwoNumbers({
+        first: 2,
+        second: 4,
+      })
+    ).toEqual(6);
 
-//     expect(
-//       addTwoNumbers({
-//         first: 10,
-//         second: 20,
-//       })
-//     ).toEqual(30);
-//     expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<{ first: number; second: number }>();
-//   });
-// }); 
+    expect(
+      addTwoNumbers({
+        first: 10,
+        second: 20,
+      })
+    ).toEqual(30);
+    expectTypeOf(addTwoNumbers).parameter(0).toEqualTypeOf<{ first: number; second: number }>();
+  });
+}); 
 
-// /*
-// Repte 3:
-//   Has d'esbrinar com tipar l'objecte perquè 'last' sigui opcional.
-// */
+/*
+Repte 3:
+  Has d'esbrinar com tipar l'objecte perquè 'last' sigui opcional.
+*/
 
-// describe("Problema de propietats opcionals", () => {
-//   // const getName = (params: { first: string; last: string }) => {
-//   // Añadido ? en last
-//   const getName = (params: { first: string; last?: string}) => {
-//     if (params.last !== undefined) {
-//       return `${params.first} ${params.last}`;
-//     }
-//     return params.first;
-//   };
+describe("Problema de propietats opcionals", () => {
+  // const getName = (params: { first: string; last: string }) => {
+  // Añadido ? en last
+  const getName = (params: { first: string; last?: string}) => {
+    if (params.last !== undefined) {
+      return `${params.first} ${params.last}`;
+    }
+    return params.first;
+  };
 
-//   it("Ha de funcionar només amb el nom", () => {
-//     const name = getName({
-//       first: "Jen",
-//     });
+  it("Ha de funcionar només amb el nom", () => {
+    const name = getName({
+      first: "Jen",
+    });
 
-//     expect(name).toEqual("Jen");
-//   });
+    expect(name).toEqual("Jen");
+  });
 
-//   it("Ha de funcionar amb el nom i el cognom", () => {
-//     const name = getName({
-//       first: "Jen",
-//       last: "Simmons",
-//     });
+  it("Ha de funcionar amb el nom i el cognom", () => {
+    const name = getName({
+      first: "Jen",
+      last: "Simmons",
+    });
 
-//     expect(name).toEqual("Jen Simmons");
-//   });
-// });
+    expect(name).toEqual("Jen Simmons");
+  });
+});
 
-// /*
-// Repte 4:
-//   Has d'esbrinar com marcar el paràmetre 'last' com a opcional.
-// */
+/*
+Repte 4:
+  Has d'esbrinar com marcar el paràmetre 'last' com a opcional.
+*/
 
-// describe("Problema de paràmetres opcionals", () => {
-//   const getName = (first: string, last?: string) => {
-//     if (last !== undefined) {
-//       return `${first} ${last}`;
-//     }
-//     return first;
-//   };
+describe("Problema de paràmetres opcionals", () => {
+  const getName = (first: string, last?: string) => {
+    if (last !== undefined) {
+      return `${first} ${last}`;
+    }
+    return first;
+  };
 
-//   it("Ha de funcionar només amb el nom", () => {
-//     const name = getName("Jen");
+  it("Ha de funcionar només amb el nom", () => {
+    const name = getName("Jen");
 
-//     expect(name).toEqual("Jen");
-//   });
+    expect(name).toEqual("Jen");
+  });
 
-//   it("Ha de funcionar amb el nom i el cognom", () => {
-//     const name = getName("Jen", "Simmons");
+  it("Ha de funcionar amb el nom i el cognom", () => {
+    const name = getName("Jen", "Simmons");
 
-//     expect(name).toEqual("Jen Simmons");
-//   });
-// });
+    expect(name).toEqual("Jen Simmons");
+  });
+});
 
 /*
 Repte 5:
   Consulta la [documentació de TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) i determina com canviar defaultUser perquè el test passi.
 */
 
-// describe("Problema d'assignació de tipus a variables", () => {
-//   interface User {
-//     id: number;
-//     firstName?: string;
-//     lastName?: string;
-//     isAdmin?: boolean;
-//   }
+describe("Problema d'assignació de tipus a variables", () => {
+  interface User {
+    id: number;
+    firstName?: string;
+    lastName?: string;
+    isAdmin?: boolean;
+  }
 
-//   //Com ens assegurem que defaultUser sigui de tipus User
-//   //EN AQUESTA LÍNIA - no més endavant al codi?
+  //Com ens assegurem que defaultUser sigui de tipus User
+  //EN AQUESTA LÍNIA - no més endavant al codi?
 
   
-//   const defaultUser: User = {id: 1};
+  const defaultUser: User = {id: 1};
 
-//   const getUserId = (user: User) => {
-//     return user.id;
-//   };
+  const getUserId = (user: User) => {
+    return user.id;
+  };
 
-//   it("Ha d'obtenir l'identificador de l'usuari", () => {
-//     expect(getUserId(defaultUser)).toEqual(1);
-//   });
-// });
+  it("Ha d'obtenir l'identificador de l'usuari", () => {
+    expect(getUserId(defaultUser)).toEqual(1);
+  });
+});
 
 /*
 Repte 6:
