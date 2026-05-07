@@ -151,7 +151,7 @@ Repte 6:
   El valor I_SHOULD_NOT_BE_ALLOWED hauria de provocar un error, eliminant la línia vermella sota el comentari // @ts-expect-error.
 */
 
-/* describe("Problema d'unions", () => {
+describe("Problema d'unions", () => {
   interface User {
     id: number;
     firstName: string;
@@ -160,7 +160,7 @@ Repte 6:
     //- 'admin'
     //- 'user'
     //- 'super-admin'
-    role: string;
+    role: 'admin' | 'user' | 'super-admin';
   }
 
   const defaultUser: User = {
@@ -170,7 +170,7 @@ Repte 6:
     // @ts-expect-error
     role: "I_SHOULD_NOT_BE_ALLOWED",
   };
-}); */
+}); 
 
 /*
 Repte 7:
