@@ -255,7 +255,7 @@ Repte 9:
   Has d'esbrinar com actualitzar l'anotació del tipus de retorn perquè TypeScript estigui satisfet.
 */
 
-/* describe("Problema de promeses", () => {
+describe("Problema de promeses", () => {
   interface LukeSkywalker {
     name: string;
     height: string;
@@ -267,7 +267,7 @@ Repte 9:
     gender: string;
   }
 
-  const fetchLukeSkywalker = async (): LukeSkywalker => {
+  const fetchLukeSkywalker = async (): Promise<LukeSkywalker> => {
     const data = await fetch("https://swapi.py4e.com/api/people/1").then(
       (res) => {
         return res.json();
@@ -282,7 +282,7 @@ Repte 9:
 
     expect(result).toBeInstanceOf(Promise);
   });
-}); */
+});
 
 /*
 Repte 10:
