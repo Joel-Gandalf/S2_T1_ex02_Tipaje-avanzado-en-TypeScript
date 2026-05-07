@@ -177,13 +177,15 @@ Repte 7:
   Has de solucionar aquest error de tipus esbrinant com representar arrays.
 */
 
-/* describe("Problema d'arrays", () => {
+describe("Problema d'arrays", () => {
   interface User {
     id: number;
     firstName: string;
     lastName: string;
     role: "admin" | "user" | "super-admin";
-    posts: Post;
+    // posts: [Post, Post]; TUPLA: array con número de elementos definido.
+    // Así sólo podrian existir 2 Posts, sin posibilidad de ampliación futura.
+    posts: Post[];
   }
 
   interface Post {
@@ -207,7 +209,7 @@ Repte 7:
       },
     ],
   };
-}); */
+});
 
 /*
 Repte 8:
