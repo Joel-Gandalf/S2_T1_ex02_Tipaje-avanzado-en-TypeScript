@@ -289,11 +289,14 @@ Repte 10:
   Actualitza guitarists perquè estigui tipat com un Set de strings.
 */
 
-/* describe("Problema de Set", () => {
-  const guitarists = new Set();
+describe("Problema de Set", () => {
+  const guitarists = new Set<string>();
 
   guitarists.add("Jimi Hendrix");
   guitarists.add("Eric Clapton");
+
+  // Opción 2, sustituyendo a las tres lineas anteriores:
+  // const guitarists = new Set(['Jimi Hendrix','Eric Clapton']);
 
   it("Ha de contenir en Jimi i l'Eric", () => {
     expect(guitarists.has("Jimi Hendrix")).toEqual(true);
@@ -310,7 +313,7 @@ Repte 10:
 
     type tests = [Expect<Equal<typeof guitaristsAsArray, string[]>>];
   });
-}); */
+});
 
 /*
 Repte 11:
