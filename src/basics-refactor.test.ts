@@ -216,7 +216,7 @@ Repte 8:
   Anota la funció makeUser perquè sempre retorni un User.
 */
 
-/* describe("Problema d'anotacions de tipus de retorn de funció", () => {
+describe("Problema d'anotacions de tipus de retorn de funció", () => {
   interface User {
     id: number;
     firstName: string;
@@ -233,12 +233,12 @@ Repte 8:
   //Com ens assegurem que makeUser SEMPRE
   //retorni un usuari?
   
-  const makeUser = () => {
-    return {};
+  const makeUser = (user: User): User => {
+    return user;
   };
 
   it("Ha de retornar un usuari vàlid", () => {
-    const user = makeUser();
+    const user = makeUser({id: 23, firstName: 'joel', lastName: 'lillo', role: 'admin', posts: [{id: 23, title: 'Hola'}],},);
 
     expect(user.id).toBeTypeOf("number");
     expect(user.firstName).toBeTypeOf("string");
@@ -248,7 +248,7 @@ Repte 8:
     expect(user.posts[0].id).toBeTypeOf("number");
     expect(user.posts[0].title).toBeTypeOf("string");
   });
-}); */
+});
 
 /*
 Repte 9:
