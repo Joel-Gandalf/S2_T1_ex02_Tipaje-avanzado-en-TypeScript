@@ -537,9 +537,10 @@ Repte 17:
   La funció 'onFocusChange' is actualment 'unknown'. Visita la documentació de TypeScript i esbrina el tipus apropiat per la funció.
 */
 
-/* describe("Problema de tipus de funció", () => {
+describe("Problema de tipus de funció", () => {
 
-  const addListener = (onFocusChange: any) => {
+  // const addListener = (onFocusChange: any) => {
+  const addListener = (onFocusChange: (isFocused: boolean)=> void) => {
     onFocusChange(true);
     onFocusChange(false);
   };
@@ -549,7 +550,7 @@ Repte 17:
 
     type tests = [Expect<Equal<typeof isFocused, boolean>>];
   });
-}); */
+});
 
 /*
 Repte 18:
