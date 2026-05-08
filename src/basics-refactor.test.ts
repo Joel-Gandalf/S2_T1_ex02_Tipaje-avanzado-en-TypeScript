@@ -390,21 +390,33 @@ Repte 13:
   Pista: hi ha diverses maneres de resoldre aquest repte, prova diferents opcions!
 */
 
-/* describe("Problema de blocs catch", () => {
+describe("Problema de blocs catch", () => {
   const tryCatchDemo = (state: "fail" | "succeed") => {
     try {
       if (state === "fail") {
         throw new Error("Failure!");
       }
+      // Añadido para gestionar succeed:
+      return 'Success';
+    
     } catch (e) {
-      return e.message;
+      // Opción 1 Narrowing(+ seguro, comprueba si es un objeto Error antes de usarlo):
+      if( e instanceof Error){
+        return e.message;
+      }
+      // Añadido para controlar errores inesperados no estándar:
+      // throw e;                 // Rethrow(Relanza el error y permite ver que es en consola. La función falla.) 
+      return "Unexpected error";  // Incluso si el error no es estándar la función siempre termina con éxito, devolviendo un mensaje.
+      
+      // Opción 2(- seguro, unknown se convierte en Error por la fuerza, si no lo fuera el programa fallaría en tiempo de ejecución):
+      // return (e as Error);
     }
   };
 
   it("Ha de retornar el missatge quan falla", () => {
     expect(tryCatchDemo("fail")).toEqual("Failure!");
   });
-}); */
+});
 
 /*
 Repte 14:
