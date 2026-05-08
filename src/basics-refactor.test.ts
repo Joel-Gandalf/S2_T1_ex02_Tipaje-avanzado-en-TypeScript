@@ -473,7 +473,14 @@ describe("Problema d'intersecció de tipus", () => {
     body: string;
   }
 
-  // const getDefaultUserAndPosts = (): unknown => {
+  // Otra opción: 
+  // interface UserWithPosts extends User {
+  //   posts: Post[]
+  // }
+            // Enunciado:
+            // const getDefaultUserAndPosts = (): unknown => {
+            
+  // const getDefaultUserAndPosts = (): UserWithPosts => {
     const getDefaultUserAndPosts = (): User & { posts: Post[] } => {
     return {
       id: "1",
