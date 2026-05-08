@@ -428,21 +428,23 @@ Repte 14:
   Pista: pots crear una interfície base i reutilitzar-la amb extends.
 */
 
-/* describe("Problema d'herència amb extends", () => {
-  interface User {
+describe("Problema d'herència amb extends", () => {
+  interface Base {
     id: string;
+  }
+  interface User extends Base{
+    // id: string;
     firstName: string;
     lastName: string;
   }
-
-  interface Post {
-    id: string;
+  interface Post extends Base{
+    // id: string;
     title: string;
     body: string;
   }
 
-  interface Comment {
-    id: string;
+  interface Comment extends Base {
+    // id: string;
     comment: string;
   }
 
@@ -451,7 +453,7 @@ Repte 14:
     Expect<Equal<Post, { id: string; title: string; body: string }>>,
     Expect<Equal<Comment, { id: string; comment: string }>>
   ];
-}); */
+});
 
 /*
 Repte 15:
