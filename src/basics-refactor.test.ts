@@ -460,7 +460,7 @@ Repte 15:
   Actualitza el tipus de retorn de la funció perquè sigui 'User & { posts: Post[] }'.
 */
 
-/* describe("Problema d'intersecció de tipus", () => {
+describe("Problema d'intersecció de tipus", () => {
   interface User {
     id: string;
     firstName: string;
@@ -473,7 +473,8 @@ Repte 15:
     body: string;
   }
 
-  const getDefaultUserAndPosts = (): unknown => {
+  // const getDefaultUserAndPosts = (): unknown => {
+    const getDefaultUserAndPosts = (): User & { posts: Post[] } => {
     return {
       id: "1",
       firstName: "Jen",
@@ -497,7 +498,7 @@ Repte 15:
 
     expect(userAndPosts.posts[0].id).toBeTypeOf("string");
   });
-}); */
+});
 
 /*
 Repte 16:
