@@ -209,20 +209,24 @@ Repte 9:
   Dona un exemple de terminologia: union, discriminated union i enum.
 */
 
-/* describe("Transformació: terminologia de tipus", () => {
+describe("Transformació: terminologia de tipus", () => {
+  // Discriminated union:
   type A =
     | { type: "a"; a: string }
     | { type: "b"; b: string }
     | { type: "c"; c: string };
 
+  // Union: 
   type B = "a" | "b" | "c";
 
+  // Enum:
   enum C {
     A = "a",
     B = "b",
     C = "c",
   }
-}); */
+});
+// NO se si sólo querías que discriminara entre cada caso o tenía que hacer algo más?
 
 /*
 Repte 10:
