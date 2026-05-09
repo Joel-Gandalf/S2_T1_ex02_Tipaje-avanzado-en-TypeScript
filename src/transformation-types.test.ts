@@ -25,7 +25,7 @@ Repte 2:
   Utilitza Parameters per obtenir el tipus dels paràmetres de la funció makeQuery.
 */
 
-/* describe("Transformació: obtenir els paràmetres d'una funció", () => {
+describe("Transformació: obtenir els paràmetres d'una funció", () => {
   const makeQuery = (
     url: string,
     opts?: {
@@ -37,7 +37,7 @@ Repte 2:
     },
   ) => {};
 
-  type MakeQueryParameters = unknown;
+  type MakeQueryParameters = Parameters<typeof makeQuery>;
 
   type tests = [
     Expect<
@@ -56,7 +56,7 @@ Repte 2:
       >
     >,
   ];
-}); */
+});
 
 /*
 Repte 3:
