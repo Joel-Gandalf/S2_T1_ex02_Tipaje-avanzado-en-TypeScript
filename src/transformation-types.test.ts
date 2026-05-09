@@ -253,13 +253,13 @@ Repte 11:
   Pista: revisa Exclude.
 */
 
-/* describe("Transformació: exclude d'una discriminated union", () => {
+describe("Transformació: exclude d'una discriminated union", () => {
   type Event =
     | { type: "click"; event: MouseEvent }
     | { type: "focus"; event: FocusEvent }
     | { type: "keydown"; event: KeyboardEvent };
 
-  type NonKeyDownEvents = unknown;
+  type NonKeyDownEvents = Exclude<Event, {type: "keydown"}>;
 
   type tests = [
     Expect<
@@ -270,7 +270,7 @@ Repte 11:
       >
     >,
   ];
-}); */
+});
 
 /*
 Repte 12:
