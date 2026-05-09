@@ -1,5 +1,5 @@
-// import { describe, expect, it } from "vitest";
-// import { Equal, Expect } from "./helpers/type-utils";
+import { describe, expect, it } from "vitest";
+import { Equal, Expect } from "./helpers/type-utils";
 
 /*
 Repte 1:
@@ -8,17 +8,17 @@ Llegeix la documentació de TypeScript sobre Utility Types i esbrina com utilitz
   Pista: pots utilitzar typeof per obtenir el tipus d'una funció.
 */
 
-/* describe("Transformació: obtenir el tipus de retorn d'una funció", () => {
+describe("Transformació: obtenir el tipus de retorn d'una funció", () => {
   const myFunc = () => {
     return "hello";
   };
 
   //Com podem extreure MyFuncReturn a partir de myFunc?
   
-  type MyFuncReturn = unknown;
+  type MyFuncReturn = ReturnType<typeof myFunc>;
 
   type tests = [Expect<Equal<MyFuncReturn, string>>];
-}); */
+});
 
 /*
 Repte 2:
