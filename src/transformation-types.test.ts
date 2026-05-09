@@ -64,7 +64,7 @@ Repte 3:
   Pista: fixa't que la funció retorna una Promise.
 */
 
-/* describe("Transformació: obtenir el tipus de retorn d'una funció asíncrona", () => {
+describe("Transformació: obtenir el tipus de retorn d'una funció asíncrona", () => {
   const getUser = () => {
     return Promise.resolve({
       id: "123",
@@ -73,12 +73,12 @@ Repte 3:
     });
   };
 
-  type ReturnValue = unknown;
+  type ReturnValue = Awaited<ReturnType<typeof getUser>>;
 
   type tests = [
     Expect<Equal<ReturnValue, { id: string; name: string; email: string }>>,
   ];
-}); */
+});
 
 /*
 Repte 4:
