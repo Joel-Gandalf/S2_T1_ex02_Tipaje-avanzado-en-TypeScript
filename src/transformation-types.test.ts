@@ -234,18 +234,18 @@ Repte 10:
   Pista: revisa Extract.
 */
 
-/* describe("Transformació: extract d'una discriminated union", () => {
+describe("Transformació: extract d'una discriminated union", () => {
   type Event =
     | { type: "click"; event: MouseEvent }
     | { type: "focus"; event: FocusEvent }
     | { type: "keydown"; event: KeyboardEvent };
 
-  type ClickEvent = unknown;
+  type ClickEvent = Extract<Event, {type: "click"}>;
 
   type tests = [
     Expect<Equal<ClickEvent, { type: "click"; event: MouseEvent }>>,
   ];
-}); */
+});
 
 /*
 Repte 11:
