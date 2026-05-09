@@ -135,7 +135,7 @@ Repte 6:
   Pista: fixa't en l'ús de "as const".
 */
 
-/* describe("Transformació: indexed access amb unions", () => {
+describe("Transformació: indexed access amb unions", () => {
   const programModeEnumMap = {
     GROUP: "group",
     ANNOUNCEMENT: "announcement",
@@ -145,8 +145,8 @@ Repte 6:
     PLANNED_SELF_DIRECTED: "plannedSelfDirected",
   } as const;
 
-  type IndividualProgram = unknown;
-
+  type IndividualProgram = (typeof programModeEnumMap)["ONE_ON_ONE"| "SELF_DIRECTED"| "PLANNED_ONE_ON_ONE"| "PLANNED_SELF_DIRECTED"];
+  // También me funciona con y sin paréntesis. CREO que así es más correcto.
   type tests = [
     Expect<
       Equal<
@@ -155,7 +155,7 @@ Repte 6:
       >
     >,
   ];
-}); */
+});
 
 /*
 Repte 7:
