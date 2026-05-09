@@ -162,17 +162,20 @@ Repte 7:
   Utilitza indexed access types i unions per obtenir el tipus dels valors d'un array.
 */
 
-/* describe("Transformació: obtenir el tipus dels valors d'un array", () => {
+describe("Transformació: obtenir el tipus dels valors d'un array", () => {
   const fruits = ["apple", "banana", "orange"] as const;
 
-  type AppleOrBanana = unknown;
-  type Fruit = unknown;
+  type AppleOrBanana = (typeof fruits)[0 | 1];
+  // Opción 1:
+  type Fruit = (typeof fruits)[number];   // number equivale a todos los elementos del array.
+  // Opción 2:
+  // type Fruit = (typeof fruits)[0 | 1 | 2];
 
   type tests = [
     Expect<Equal<AppleOrBanana, "apple" | "banana">>,
     Expect<Equal<Fruit, "apple" | "banana" | "orange">>,
   ];
-}); */
+});
 
 /*
 Repte 8:
