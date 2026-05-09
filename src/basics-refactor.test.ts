@@ -558,17 +558,17 @@ Repte 18:
   Consulta la sintaxi de tipatge de funcions i Promise que hem vist anteriorment per ajudar-te.
 */
 
-/* describe("Problema de tipus de funció amb promeses", () => {
+describe("Problema de tipus de funció amb promeses", () => {
 
     interface User {
         id: string;
         firstName: string;
         lastName: string;
       }
-      
+     
       const createThenGetUser = async (
-        createUser: unknown,
-        getUser: unknown,
+        createUser: () => Promise<string> ,
+        getUser: (userId: string)=> Promise<User> ,
       ): Promise<User> => {
         const userId: string = await createUser();
       
@@ -577,7 +577,6 @@ Repte 18:
         return user;
       };
       
-
   it("Ha de crear l'usuari i després obtenir-lo", async () => {
     const user = await createThenGetUser(
       async () => "123",
@@ -594,7 +593,7 @@ Repte 18:
       lastName: "Simmons",
     });
   });
-}); */
+});
 
 /*
 Repte:
