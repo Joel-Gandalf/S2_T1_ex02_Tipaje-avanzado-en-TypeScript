@@ -103,7 +103,7 @@ Repte 5:
   Utilitza indexed access types per obtenir el tipus d'una propietat concreta d'un objecte.
 */
 
-/* describe("Transformació: indexed access amb objectes", () => {
+describe("Transformació: indexed access amb objectes", () => {
   const fakeDataDefaults = {
     String: "Default string",
     Int: 1,
@@ -112,11 +112,13 @@ Repte 5:
     ID: "id",
   };
 
-  type StringType = unknown;
-  type IntType = unknown;
-  type FloatType = unknown;
-  type BooleanType = unknown;
-  type IDType = unknown;
+  type StringType = (typeof fakeDataDefaults)["String"];
+  type IntType = (typeof fakeDataDefaults)["Int"];
+  type FloatType = (typeof fakeDataDefaults)["Float"];
+  type BooleanType = typeof fakeDataDefaults["Boolean"];
+  type IDType = typeof fakeDataDefaults["ID"];
+  // Funciona con y sin (). En teoría la forma correcta es con ().
+  // 1ero se obtiene el tip del objeto y luego se accede a la propiedad.
 
   type tests = [
     Expect<Equal<StringType, string>>,
@@ -125,7 +127,7 @@ Repte 5:
     Expect<Equal<BooleanType, boolean>>,
     Expect<Equal<IDType, string>>,
   ];
-}); */
+});
 
 /*
 Repte 6:
