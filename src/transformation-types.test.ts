@@ -286,6 +286,9 @@ describe("Transformació: obtenir el tipus del discriminador", () => {
   type EventType = Event["type"];
 
   type tests = [Expect<Equal<EventType, "click" | "focus" | "keydown">>];
+  
+  // Para extraer sólo un tipo:
+  // type EventClickType = Extract<Event, { type: "click" }>["type"];
 });
 
 /*
